@@ -1,4 +1,4 @@
-package recipe
+package model
 
 func NewRecipe(id int, name string, category string, howmany int, time int, descript []string, ingredient []Ingredient, nutrition []Nutrition) Recipe {
 	return Recipe{
