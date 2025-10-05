@@ -1,6 +1,6 @@
 package model
 
-func NewRecipe(id uint32, name string, category string, howmany int, time Amount, descript []string, ingredient []Ingredient, nutrition Nutrition) Recipe {
+func NewRecipe(id uint32, name string, category string, howmany int, time int, descript []string, ingredient []Ingredient, nutrition Nutrition) Recipe {
 	return Recipe{
 		Id:          id,
 		Name:        name,
@@ -18,7 +18,7 @@ type Recipe struct {
 	Name        string       `json:"name"`        // レシピ名
 	Category    string       `json:"category"`    // 分類
 	Howmany     int          `json:"howmany"`     // 何人分か
-	Time        Amount       `json:"time"`        // 調理にかかる時間
+	Time        int          `json:"time"`        // 調理にかかる時間（分）
 	Descript    []string     `json:"descript"`    // 作り方の説明
 	Ingredients []Ingredient `json:"ingredients"` // 材料
 	Nutrition   Nutrition    `json:"nutrition"`   // 栄養価
@@ -40,10 +40,10 @@ type Ingredient struct {
 }
 
 type Nutrition struct {
-	Calorie        Amount           `json:"calorie"`
-	Protein        Amount           `json:"protein"`
-	Lipids         Amount           `json:"lipids"`
-	Carbohydrates  Amount           `json:"carbohydrates"`
+	Calorie        float32          `json:"calorie"`
+	Protein        float32          `json:"protein"`
+	Lipids         float32          `json:"lipids"`
+	Carbohydrates  float32          `json:"carbohydrates"`
 	OtherNutrition []OtherNutrition `json:"otherNutrition"`
 }
 type OtherNutrition struct {
