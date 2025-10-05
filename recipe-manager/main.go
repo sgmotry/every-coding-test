@@ -2,6 +2,7 @@ package main
 
 import (
 	"every-coding-test/internal/data"
+	"every-coding-test/internal/utils"
 	"fmt"
 )
 
@@ -11,5 +12,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Error while getting recipes.\n", err)
 	}
-	fmt.Println(data[0].Category)
+	utils.SortRecipe(data, "id", "desc")
 }
