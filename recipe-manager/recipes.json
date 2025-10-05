@@ -4,29 +4,34 @@
     "name": "基本の肉じゃが",
     "category": "和食",
     "howmany": 4,
-    "time": {
-      "number": 40,
-      "unit": "分"
-    },
+    "time": 35,
     "descript": [
-      "牛肉と野菜を食べやすい大きさに切ります。",
-      "鍋にごま油を熱し、牛肉を炒めます。",
-      "じゃがいも、玉ねぎ、にんじんを加えてさらに炒めます。",
-      "水、醤油、みりん、砂糖を加え、蓋をして野菜が柔らかくなるまで煮込みます。"
+      "牛肉は食べやすい大きさに切る。",
+      "じゃがいも、玉ねぎ、人参は皮をむき、適当な大きさに切る。",
+      "鍋に油を熱し、牛肉、じゃがいも、人参、玉ねぎの順に炒める。",
+      "水と調味料（醤油、みりん、砂糖、酒）を加え、アクを取りながら煮込む。",
+      "じゃがいもが柔らかくなったら完成。"
     ],
     "ingredients": [
       {
-        "name": "牛薄切り肉",
+        "name": "牛肉（薄切り）",
         "amount": {
-          "number": 200,
+          "number": 250,
           "unit": "g"
         }
       },
       {
         "name": "じゃがいも",
         "amount": {
-          "number": 3,
+          "number": 4,
           "unit": "個"
+        }
+      },
+      {
+        "name": "人参",
+        "amount": {
+          "number": 1,
+          "unit": "本"
         }
       },
       {
@@ -37,57 +42,24 @@
         }
       },
       {
-        "name": "にんじん",
-        "amount": {
-          "number": 1,
-          "unit": "本"
-        }
-      },
-      {
         "name": "醤油",
         "amount": {
           "number": 4,
           "unit": "大さじ"
         }
-      },
-      {
-        "name": "みりん",
-        "amount": {
-          "number": 3,
-          "unit": "大さじ"
-        }
-      },
-      {
-        "name": "砂糖",
-        "amount": {
-          "number": 2,
-          "unit": "大さじ"
-        }
       }
     ],
     "nutrition": {
-      "calorie": {
-        "number": 350,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 20,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 15,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 35,
-        "unit": "g"
-      },
+      "calorie": 450.5,
+      "protein": 30.2,
+      "lipids": 18.1,
+      "carbohydrates": 48.7,
       "otherNutrition": [
         {
-          "name": "食物繊維",
+          "name": "ビタミンC",
           "amount": {
-            "number": 5,
-            "unit": "g"
+            "number": 35,
+            "unit": "mg"
           }
         }
       ]
@@ -95,19 +67,66 @@
   },
   {
     "id": 2,
-    "name": "鶏むね肉のヘルシーサラダチキン",
-    "category": "ダイエット・ヘルシー",
+    "name": "簡単ミートソースパスタ",
+    "category": "洋食",
     "howmany": 2,
-    "time": {
-      "number": 20,
-      "unit": "分"
-    },
+    "time": 25,
     "descript": [
-      "鶏むね肉にフォークで穴を開け、塩胡椒を振ります。",
-      "耐熱性の袋に入れ、酒を少量加えます。",
-      "鍋に湯を沸かし、沸騰したら火を止め、袋に入れた鶏むね肉を入れます。",
-      "蓋をして、20分ほど余熱で火を通します。",
-      "冷めたら手で裂いて完成です。"
+      "玉ねぎ、人参、セロリをみじん切りにする。",
+      "鍋にオリーブオイルを熱し、ひき肉とみじん切り野菜を炒める。",
+      "ひき肉の色が変わったら、カットトマト缶、水、コンソメ、ローリエを加える。",
+      "弱火で20分ほど煮込み、塩胡椒で味を調える。",
+      "茹でたパスタにソースをかける。"
+    ],
+    "ingredients": [
+      {
+        "name": "パスタ",
+        "amount": {
+          "number": 200,
+          "unit": "g"
+        }
+      },
+      {
+        "name": "合いびき肉",
+        "amount": {
+          "number": 200,
+          "unit": "g"
+        }
+      },
+      {
+        "name": "カットトマト缶",
+        "amount": {
+          "number": 1,
+          "unit": "缶"
+        }
+      },
+      {
+        "name": "玉ねぎ",
+        "amount": {
+          "number": 0.5,
+          "unit": "個"
+        }
+      }
+    ],
+    "nutrition": {
+      "calorie": 620.8,
+      "protein": 40.5,
+      "lipids": 25.3,
+      "carbohydrates": 65.1,
+      "otherNutrition": []
+    }
+  },
+  {
+    "id": 3,
+    "name": "鶏むね肉と野菜の黒酢炒め",
+    "category": "中華",
+    "howmany": 3,
+    "time": 20,
+    "descript": [
+      "鶏むね肉は一口大に切り、片栗粉をまぶす。",
+      "パプリカ、ピーマン、玉ねぎを乱切りにする。",
+      "フライパンにごま油を熱し、鶏肉を炒める。",
+      "野菜を加え、火が通ったら黒酢、醤油、砂糖を合わせたタレを絡める。"
     ],
     "ingredients": [
       {
@@ -118,75 +137,67 @@
         }
       },
       {
-        "name": "塩",
+        "name": "パプリカ（赤・黄）",
         "amount": {
           "number": 1,
-          "unit": "小さじ"
+          "unit": "個"
         }
       },
       {
-        "name": "酒",
+        "name": "ピーマン",
         "amount": {
-          "number": 1,
+          "number": 2,
+          "unit": "個"
+        }
+      },
+      {
+        "name": "黒酢",
+        "amount": {
+          "number": 3,
           "unit": "大さじ"
         }
       }
     ],
     "nutrition": {
-      "calorie": {
-        "number": 150,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 30,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 3,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 0,
-        "unit": "g"
-      },
-      "otherNutrition": []
+      "calorie": 380.2,
+      "protein": 45.8,
+      "lipids": 12.5,
+      "carbohydrates": 20.3,
+      "otherNutrition": [
+        {
+          "name": "食物繊維",
+          "amount": {
+            "number": 5.2,
+            "unit": "g"
+          }
+        }
+      ]
     }
   },
   {
-    "id": 3,
-    "name": "簡単トマトパスタ",
-    "category": "洋食",
-    "howmany": 1,
-    "time": {
-      "number": 15,
-      "unit": "分"
-    },
+    "id": 4,
+    "name": "アボカドとトマトのサラダ",
+    "category": "サラダ",
+    "howmany": 2,
+    "time": 10,
     "descript": [
-      "パスタを袋の表示通りに茹でます。",
-      "フライパンにオリーブオイル、にんにくを熱し、香りが出たらカットトマト缶を加えます。",
-      "塩胡椒で味を調え、茹で上がったパスタと絡めます。",
-      "お皿に盛り付け、お好みで粉チーズをかけます。"
+      "アボカドとトマトを角切りにする。",
+      "ボウルに入れ、レモン汁、オリーブオイル、塩胡椒で和える。",
+      "器に盛り付け、お好みでバジルを散らす。"
     ],
     "ingredients": [
       {
-        "name": "パスタ（乾麺）",
-        "amount": {
-          "number": 80,
-          "unit": "g"
-        }
-      },
-      {
-        "name": "カットトマト缶",
-        "amount": {
-          "number": 100,
-          "unit": "g"
-        }
-      },
-      {
-        "name": "にんにく",
+        "name": "アボカド",
         "amount": {
           "number": 1,
-          "unit": "かけ"
+          "unit": "個"
+        }
+      },
+      {
+        "name": "トマト",
+        "amount": {
+          "number": 1,
+          "unit": "個"
         }
       },
       {
@@ -198,99 +209,15 @@
       }
     ],
     "nutrition": {
-      "calorie": {
-        "number": 400,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 12,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 10,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 65,
-        "unit": "g"
-      },
+      "calorie": 250.9,
+      "protein": 5.1,
+      "lipids": 22.8,
+      "carbohydrates": 12.4,
       "otherNutrition": [
         {
-          "name": "リコピン",
+          "name": "ビタミンE",
           "amount": {
-            "number": 5,
-            "unit": "mg"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id": 4,
-    "name": "ホウレンソウの胡麻和え",
-    "category": "副菜",
-    "howmany": 3,
-    "time": {
-      "number": 10,
-      "unit": "分"
-    },
-    "descript": [
-      "ホウレンソウを茹でて水気を絞り、3cmの長さに切ります。",
-      "すりごま、醤油、砂糖を混ぜて和え衣を作ります。",
-      "ホウレンソウと和え衣を混ぜ合わせて完成です。"
-    ],
-    "ingredients": [
-      {
-        "name": "ホウレンソウ",
-        "amount": {
-          "number": 1,
-          "unit": "束"
-        }
-      },
-      {
-        "name": "すりごま",
-        "amount": {
-          "number": 2,
-          "unit": "大さじ"
-        }
-      },
-      {
-        "name": "醤油",
-        "amount": {
-          "number": 1,
-          "unit": "大さじ"
-        }
-      },
-      {
-        "name": "砂糖",
-        "amount": {
-          "number": 0.5,
-          "unit": "大さじ"
-        }
-      }
-    ],
-    "nutrition": {
-      "calorie": {
-        "number": 80,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 5,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 5,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 5,
-        "unit": "g"
-      },
-      "otherNutrition": [
-        {
-          "name": "鉄分",
-          "amount": {
-            "number": 2,
+            "number": 3.1,
             "unit": "mg"
           }
         }
@@ -299,87 +226,19 @@
   },
   {
     "id": 5,
-    "name": "本格麻婆豆腐",
-    "category": "中華",
-    "howmany": 2,
-    "time": {
-      "number": 25,
-      "unit": "分"
-    },
-    "descript": [
-      "豆腐をさいの目に切り、豚ひき肉を準備します。",
-      "フライパンにごま油、豆板醤、にんにく、生姜を入れ香りを出します。",
-      "ひき肉を炒め、色が変わったら豆腐と水、調味料（醤油、甜麺醤など）を加えます。",
-      "水溶き片栗粉でとろみをつけ、ラー油、花椒を振って仕上げます。"
-    ],
-    "ingredients": [
-      {
-        "name": "木綿豆腐",
-        "amount": {
-          "number": 1,
-          "unit": "丁"
-        }
-      },
-      {
-        "name": "豚ひき肉",
-        "amount": {
-          "number": 150,
-          "unit": "g"
-        }
-      },
-      {
-        "name": "豆板醤",
-        "amount": {
-          "number": 1,
-          "unit": "小さじ"
-        }
-      },
-      {
-        "name": "長ネギ",
-        "amount": {
-          "number": 1,
-          "unit": "本"
-        }
-      }
-    ],
-    "nutrition": {
-      "calorie": {
-        "number": 450,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 30,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 30,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 15,
-        "unit": "g"
-      },
-      "otherNutrition": []
-    }
-  },
-  {
-    "id": 6,
     "name": "鮭のムニエル レモンバターソース",
-    "category": "魚料理",
+    "category": "洋食",
     "howmany": 2,
-    "time": {
-      "number": 20,
-      "unit": "分"
-    },
+    "time": 15,
     "descript": [
-      "鮭に塩胡椒をし、薄力粉をまぶします。",
-      "フライパンにバターを熱し、鮭を両面焼きます。",
-      "焼き色がついたら一度取り出し、同じフライパンにバター、レモン汁、醤油を加えてソースを作ります。",
-      "鮭を戻し入れ、ソースを絡ませて完成です。"
+      "鮭に塩胡椒をし、薄力粉を薄くまぶす。",
+      "フライパンにバターとオリーブオイルを熱し、鮭を両面焼く。",
+      "焼き色がついたら火を弱め、レモン汁と醤油を加えてソースを絡める。",
+      "皿に盛り付け、パセリを振る。"
     ],
     "ingredients": [
       {
-        "name": "生鮭切り身",
+        "name": "生鮭の切り身",
         "amount": {
           "number": 2,
           "unit": "切れ"
@@ -395,40 +254,86 @@
       {
         "name": "バター",
         "amount": {
-          "number": 20,
+          "number": 10,
           "unit": "g"
         }
       },
       {
         "name": "レモン汁",
         "amount": {
-          "number": 1,
+          "number": 0.5,
+          "unit": "個分"
+        }
+      }
+    ],
+    "nutrition": {
+      "calorie": 410.7,
+      "protein": 35.5,
+      "lipids": 28.1,
+      "carbohydrates": 5.8,
+      "otherNutrition": [
+        {
+          "name": "DHA・EPA",
+          "amount": {
+            "number": 2.5,
+            "unit": "g"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "name": "豆腐とワカメの味噌汁",
+    "category": "和食",
+    "howmany": 4,
+    "time": 10,
+    "descript": [
+      "鍋にだし汁を入れ、火にかける。",
+      "沸騰直前に、食べやすい大きさに切った豆腐と乾燥ワカメを加える。",
+      "ワカメが戻ったら火を止め、味噌を溶き入れる。",
+      "器に注いでネギを散らす。"
+    ],
+    "ingredients": [
+      {
+        "name": "だし汁",
+        "amount": {
+          "number": 800,
+          "unit": "ml"
+        }
+      },
+      {
+        "name": "木綿豆腐",
+        "amount": {
+          "number": 150,
+          "unit": "g"
+        }
+      },
+      {
+        "name": "乾燥ワカメ",
+        "amount": {
+          "number": 3,
+          "unit": "g"
+        }
+      },
+      {
+        "name": "味噌",
+        "amount": {
+          "number": 4,
           "unit": "大さじ"
         }
       }
     ],
     "nutrition": {
-      "calorie": {
-        "number": 300,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 25,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 20,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 5,
-        "unit": "g"
-      },
+      "calorie": 85.3,
+      "protein": 7.9,
+      "lipids": 4.1,
+      "carbohydrates": 6.8,
       "otherNutrition": [
         {
-          "name": "DHA・EPA",
+          "name": "カルシウム",
           "amount": {
-            "number": 1000,
+            "number": 120,
             "unit": "mg"
           }
         }
@@ -437,178 +342,138 @@
   },
   {
     "id": 7,
-    "name": "手作りカスタードプリン",
-    "category": "デザート",
+    "name": "麻婆豆腐",
+    "category": "中華",
     "howmany": 3,
-    "time": {
-      "number": 60,
-      "unit": "分"
-    },
+    "time": 20,
     "descript": [
-      "カラメルソースを作ります。",
-      "卵、牛乳、砂糖を混ぜてプリン液を作ります。",
-      "こし器で漉し、カラメルを入れた型に流し込みます。",
-      "湯を張ったオーブンで蒸し焼きにし、冷やして固めます。"
+      "豆腐は水気を切り、2cm角に切る。",
+      "長ネギ、生姜、にんにくをみじん切りにする。",
+      "フライパンにごま油を熱し、ひき肉、ネギ、生姜、にんにくを炒める。",
+      "豆板醤を加え、香りが立ったら水、鶏ガラスープの素、醤油、酒を加える。",
+      "豆腐を入れ、煮立ったら水溶き片栗粉でとろみをつける。"
     ],
     "ingredients": [
       {
-        "name": "牛乳",
+        "name": "木綿豆腐",
         "amount": {
-          "number": 250,
-          "unit": "ml"
-        }
-      },
-      {
-        "name": "卵",
-        "amount": {
-          "number": 2,
-          "unit": "個"
-        }
-      },
-      {
-        "name": "砂糖",
-        "amount": {
-          "number": 50,
+          "number": 300,
           "unit": "g"
         }
-      }
-    ],
-    "nutrition": {
-      "calorie": {
-        "number": 250,
-        "unit": "kcal"
       },
-      "protein": {
-        "number": 8,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 12,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 28,
-        "unit": "g"
-      },
-      "otherNutrition": [
-        {
-          "name": "カルシウム",
-          "amount": {
-            "number": 100,
-            "unit": "mg"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id": 8,
-    "name": "野菜たっぷりミネストローネ",
-    "category": "スープ",
-    "howmany": 4,
-    "time": {
-      "number": 35,
-      "unit": "分"
-    },
-    "descript": [
-      "玉ねぎ、にんじん、セロリ、じゃがいもなどの野菜をさいの目に切ります。",
-      "鍋にオリーブオイルを熱し、野菜を炒めます。",
-      "カットトマト缶、水、コンソメを加え、野菜が柔らかくなるまで煮込みます。",
-      "塩胡椒で味を調え、お好みでパスタを加えても美味しいです。"
-    ],
-    "ingredients": [
       {
-        "name": "カットトマト缶",
+        "name": "豚ひき肉",
         "amount": {
-          "number": 1,
-          "unit": "缶"
+          "number": 100,
+          "unit": "g"
         }
       },
       {
-        "name": "玉ねぎ",
-        "amount": {
-          "number": 0.5,
-          "unit": "個"
-        }
-      },
-      {
-        "name": "にんじん",
+        "name": "長ネギ",
         "amount": {
           "number": 0.5,
           "unit": "本"
         }
       },
       {
-        "name": "じゃがいも",
+        "name": "豆板醤",
         "amount": {
           "number": 1,
-          "unit": "個"
-        }
-      },
-      {
-        "name": "コンソメ",
-        "amount": {
-          "number": 1,
-          "unit": "個"
+          "unit": "小さじ"
         }
       }
     ],
     "nutrition": {
-      "calorie": {
-        "number": 180,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 7,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 5,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 25,
-        "unit": "g"
-      },
-      "otherNutrition": [
-        {
-          "name": "ビタミンC",
-          "amount": {
-            "number": 15,
-            "unit": "mg"
-          }
+      "calorie": 480.0,
+      "protein": 38.5,
+      "lipids": 30.1,
+      "carbohydrates": 15.6,
+      "otherNutrition": []
+    }
+  },
+  {
+    "id": 8,
+    "name": "ポークカレー",
+    "category": "カレー",
+    "howmany": 6,
+    "time": 50,
+    "descript": [
+      "豚肉、じゃがいも、人参、玉ねぎを食べやすい大きさに切る。",
+      "鍋に油を熱し、豚肉と野菜を炒める。",
+      "水を加え、アクを取りながら野菜が柔らかくなるまで煮込む。",
+      "いったん火を止め、カレールーを割り入れて溶かす。",
+      "再度加熱し、とろみがつくまで煮込む。"
+    ],
+    "ingredients": [
+      {
+        "name": "豚肉（カレー用）",
+        "amount": {
+          "number": 300,
+          "unit": "g"
         }
-      ]
+      },
+      {
+        "name": "じゃがいも",
+        "amount": {
+          "number": 3,
+          "unit": "個"
+        }
+      },
+      {
+        "name": "人参",
+        "amount": {
+          "number": 2,
+          "unit": "本"
+        }
+      },
+      {
+        "name": "玉ねぎ",
+        "amount": {
+          "number": 2,
+          "unit": "個"
+        }
+      },
+      {
+        "name": "カレールー",
+        "amount": {
+          "number": 1,
+          "unit": "箱"
+        }
+      }
+    ],
+    "nutrition": {
+      "calorie": 550.6,
+      "protein": 25.1,
+      "lipids": 20.9,
+      "carbohydrates": 70.4,
+      "otherNutrition": []
     }
   },
   {
     "id": 9,
-    "name": "豚キムチ炒め",
-    "category": "韓国・エスニック",
-    "howmany": 2,
-    "time": {
-      "number": 15,
-      "unit": "分"
-    },
+    "name": "きんぴらごぼう",
+    "category": "和食",
+    "howmany": 4,
+    "time": 20,
     "descript": [
-      "豚肉とキムチを準備します。",
-      "フライパンにごま油を熱し、豚肉を炒めます。",
-      "豚肉の色が変わったら、キムチを加えてさらに炒めます。",
-      "醤油、みりんなどで味を調え、皿に盛り付けます。"
+      "ごぼうと人参を細切りにし、ごぼうは水にさらす。",
+      "フライパンにごま油を熱し、水気を切ったごぼうと人参を炒める。",
+      "火が通ったら、醤油、みりん、砂糖、酒を合わせた調味料を加え、汁気がなくなるまで炒め煮にする。",
+      "最後にいりごまを振る。"
     ],
     "ingredients": [
       {
-        "name": "豚バラ肉薄切り",
+        "name": "ごぼう",
         "amount": {
-          "number": 200,
-          "unit": "g"
+          "number": 1,
+          "unit": "本"
         }
       },
       {
-        "name": "白菜キムチ",
+        "name": "人参",
         "amount": {
-          "number": 150,
-          "unit": "g"
+          "number": 0.5,
+          "unit": "本"
         }
       },
       {
@@ -617,42 +482,43 @@
           "number": 1,
           "unit": "大さじ"
         }
+      },
+      {
+        "name": "醤油",
+        "amount": {
+          "number": 2,
+          "unit": "大さじ"
+        }
       }
     ],
     "nutrition": {
-      "calorie": {
-        "number": 420,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 25,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 30,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 10,
-        "unit": "g"
-      },
-      "otherNutrition": []
+      "calorie": 150.4,
+      "protein": 3.5,
+      "lipids": 8.1,
+      "carbohydrates": 18.2,
+      "otherNutrition": [
+        {
+          "name": "食物繊維",
+          "amount": {
+            "number": 6.8,
+            "unit": "g"
+          }
+        }
+      ]
     }
   },
   {
     "id": 10,
     "name": "簡単オムライス",
-    "category": "定番",
+    "category": "洋食",
     "howmany": 1,
-    "time": {
-      "number": 20,
-      "unit": "分"
-    },
+    "time": 15,
     "descript": [
-      "鶏肉、玉ねぎなどを細かく切り、フライパンで炒めます。",
-      "ご飯とケチャップ、塩胡椒を加えてケチャップライスを作ります。",
-      "別のフライパンで卵を焼き、ケチャップライスを包みます。",
-      "ケチャップをかけて完成です。"
+      "玉ねぎ、鶏肉をみじん切りにする。",
+      "フライパンで鶏肉、玉ねぎの順に炒め、ご飯を加えてケチャップ、塩胡椒で味付けしチキンライスを作る。",
+      "別のフライパンで卵に牛乳と塩を混ぜたものを流し入れ、半熟のオムレツを作る。",
+      "チキンライスを皿に盛り、オムレツを乗せる。",
+      "上からケチャップをかける。"
     ],
     "ingredients": [
       {
@@ -692,23 +558,19 @@
       }
     ],
     "nutrition": {
-      "calorie": {
-        "number": 600,
-        "unit": "kcal"
-      },
-      "protein": {
-        "number": 20,
-        "unit": "g"
-      },
-      "lipids": {
-        "number": 25,
-        "unit": "g"
-      },
-      "carbohydrates": {
-        "number": 75,
-        "unit": "g"
-      },
-      "otherNutrition": []
+      "calorie": 580.9,
+      "protein": 28.1,
+      "lipids": 25.5,
+      "carbohydrates": 60.2,
+      "otherNutrition": [
+        {
+          "name": "鉄分",
+          "amount": {
+            "number": 1.5,
+            "unit": "mg"
+          }
+        }
+      ]
     }
   }
 ]
