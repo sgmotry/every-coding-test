@@ -48,5 +48,7 @@ func SortRecipe(recipe []model.Recipe, orderBy OrderByOptions, order OrderOption
 	if orderErr != nil {
 		fmt.Println("Error while checking order.\n", orderErr)
 	}
-	return recipe
+
+	sortedRecipe := quickSort(recipe, orderBy, order)
+	return sortedRecipe
 }
