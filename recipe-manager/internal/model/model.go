@@ -1,18 +1,5 @@
 package model
 
-func NewRecipe(id uint32, name string, category string, howmany int, time int, descript []string, ingredient []Ingredient, nutrition Nutrition) Recipe {
-	return Recipe{
-		Id:          id,
-		Name:        name,
-		Category:    category,
-		Howmany:     howmany,
-		Time:        time,
-		Descript:    descript,
-		Ingredients: ingredient,
-		Nutrition:   nutrition,
-	}
-}
-
 type Recipe struct {
 	Id          uint32       `json:"id"`          // 識別用ID（プライマリキー）
 	Name        string       `json:"name"`        // レシピ名
