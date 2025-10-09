@@ -34,6 +34,7 @@ func Knapsack(recipes []model.Recipe, maxCalories int, maxCookingTime int) ([]ui
 			}
 		}
 	}
+	totalProtein := float32(dp[recipesLen][maxCalories][maxCookingTime]) / 10
 
 	selectedRecipesId := []uint32{}
 	c := maxCalories
@@ -55,5 +56,5 @@ func Knapsack(recipes []model.Recipe, maxCalories int, maxCookingTime int) ([]ui
 		}
 	}
 
-	return selectedRecipesId, float32(dp[recipesLen][maxCalories][maxCookingTime]) / 10
+	return selectedRecipesId, totalProtein
 }
