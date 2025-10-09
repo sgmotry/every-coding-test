@@ -2,9 +2,33 @@ package utils
 
 import (
 	"every-coding-test/internal/model"
+	"fmt"
+	"strings"
 )
 
-func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, maxCookingTime int) ([]uint32, float32) {
+func validateArg(recipes []model.Recipe, maxCalories int, maxCookingTime int) error {
+	var errors []string
+	if len(recipes) == 0 {
+		errors = append(errors, "no recipe data input")
+	}
+	if maxCalories <= 0 {
+		errors = append(errors, "maxCalories must be greater than or equal to 1")
+	}
+	if maxCookingTime <= 0 {
+		errors = append(errors, "maxCookingTime must be greater than or equal to 1")
+	}
+	if len(errors) > 0 {
+		return fmt.Errorf("error\nvalidation failed:\n%s", strings.Join(errors, "\n"))
+	}
+	return nil
+}
+
+func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, maxCookingTime int) ([]uint32, float32, error) {
+	argErr := validateArg(recipes, maxCalories, maxCookingTime)
+	if argErr != nil {
+		return nil, 0, argErr
+	}
+
 	recipesLen := len(recipes)
 
 	dp := make([][][]int, recipesLen+1)
@@ -56,5 +80,5 @@ func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, max
 		}
 	}
 
-	return selectedRecipesId, totalProtein
+	return selectedRecipesId, totalProtein, nil
 }

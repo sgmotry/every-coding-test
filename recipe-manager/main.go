@@ -10,8 +10,8 @@ func main() {
 	data, err := data.GetRecipes()
 
 	if err != nil {
-		fmt.Println("Error while getting recipes.\n", err)
+		fmt.Println(err)
 	}
-	ids, pro := utils.GetMaxProteinRecipeCombination(data, 451, 35)
-	fmt.Println(ids, pro)
+	ids, pro, err := utils.GetMaxProteinRecipeCombination(data, -1, 0)
+	fmt.Println(ids, pro, err)
 }
