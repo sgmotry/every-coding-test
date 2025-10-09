@@ -33,6 +33,12 @@ func main() {
 		fmt.Println(rec.Time)
 	}
 
+	_, err = utils.SortRecipe(nil, "hoge", "hoge")
+	fmt.Print("\n----ソート関数のエラーログ----\n\n")
+	if err != nil {
+		fmt.Println(err)
+	}
+
 	fmt.Println("\n----カロリー上限1500、調理時間上限60分でたんぱく質が最大になるレシピの組み合わせ")
 	ids, protein, err := utils.GetMaxProteinRecipeCombination(data, 1500, 60)
 	if err != nil {
@@ -40,4 +46,9 @@ func main() {
 	}
 	fmt.Println("IDの配列\n", ids)
 	fmt.Println("たんぱく質の量(g)\n", protein)
+
+	_, _, err = utils.GetMaxProteinRecipeCombination(nil, -1, -1)
+	if err != nil {
+		fmt.Print("\n----ナップサック問題のエラーログ----\n\n", err)
+	}
 }
