@@ -12,8 +12,6 @@ func main() {
 	if err != nil {
 		fmt.Println("Error while getting recipes.\n", err)
 	}
-	a := utils.SortRecipe(data, "cookingTime", "desc")
-	for _, value := range a[0:] {
-		fmt.Println(value.Time)
-	}
+	ids, pro := utils.Knapsack(data, 451, 35)
+	fmt.Println(ids, pro)
 }
