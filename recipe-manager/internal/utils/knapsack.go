@@ -23,6 +23,7 @@ func validateArg(recipes []model.Recipe, maxCalories int, maxCookingTime int) er
 	return nil
 }
 
+// カロリーと調理時間の制限内で、たんぱく質が最大になるレシピの組み合わせを求める
 func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, maxCookingTime int) ([]uint32, float32, error) {
 	argErr := validateArg(recipes, maxCalories, maxCookingTime)
 	if argErr != nil {
@@ -31,6 +32,7 @@ func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, max
 
 	recipesLen := len(recipes)
 
+	// dpテーブルの初期化
 	dp := make([][][]int, recipesLen+1)
 	for i := range dp {
 		dp[i] = make([][]int, maxCalories+1)
@@ -39,6 +41,7 @@ func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, max
 		}
 	}
 
+	// 動的計画法により最適な組み合わせを求める
 	for i := 1; i <= recipesLen; i++ {
 		recipe := recipes[i-1]
 		calorie := int(recipe.Nutrition.Calorie)
@@ -64,14 +67,15 @@ func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, max
 	c := maxCalories
 	t := maxCookingTime
 
+	// 選択されたレシピのIDを特定する
 	for i := recipesLen; i > 0; i-- {
 		recipe := recipes[i-1]
 		calorie := int(recipe.Nutrition.Calorie)
 		time := recipe.Time
 		protein := int(recipe.Nutrition.Protein * 10)
 
-		// レシピが選ばれているかチェック
 		if c >= calorie && t >= time {
+			// dpテーブルの値==選択中レシピのたんぱく質を足した値　&&　足したことによって改善した
 			if dp[i][c][t] == dp[i-1][c-calorie][t-time]+protein && dp[i][c][t] > dp[i-1][c][t] {
 				selectedRecipesId = append([]uint32{recipe.Id}, selectedRecipesId...)
 				c -= calorie

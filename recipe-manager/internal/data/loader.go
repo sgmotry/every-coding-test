@@ -7,6 +7,7 @@ import (
 	"os"
 )
 
+// ローカルファイルからrecipes.jsonを読み込む
 func GetRecipes() ([]model.Recipe, error) {
 	bytes, err := os.ReadFile("recipes.json")
 	if err != nil {

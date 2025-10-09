@@ -39,6 +39,13 @@ func validateOrder(order OrderOptions) error {
 	}
 }
 
+// レシピをオプションに従ってソートする
+//
+// オプション一覧
+//
+// orderBy（ソートの基準）: "id", "name", "calories", "cookingTime"
+//
+// order（並び順）: "asc", "desc"
 func SortRecipe(recipes []model.Recipe, orderBy OrderByOptions, order OrderOptions) ([]model.Recipe, error) {
 	orderByErr := validateOrderBy(orderBy)
 	if orderByErr != nil {
