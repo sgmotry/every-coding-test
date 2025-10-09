@@ -4,7 +4,7 @@ import (
 	"every-coding-test/internal/model"
 )
 
-func Knapsack(recipes []model.Recipe, maxCalories int, maxCookingTime int) ([]uint32, float32) {
+func GetMaxProteinRecipeCombination(recipes []model.Recipe, maxCalories int, maxCookingTime int) ([]uint32, float32) {
 	recipesLen := len(recipes)
 
 	dp := make([][][]int, recipesLen+1)

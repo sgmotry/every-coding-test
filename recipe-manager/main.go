@@ -12,6 +12,6 @@ func main() {
 	if err != nil {
 		fmt.Println("Error while getting recipes.\n", err)
 	}
-	ids, pro := utils.Knapsack(data, 451, 35)
+	ids, pro := utils.GetMaxProteinRecipeCombination(data, 451, 35)
 	fmt.Println(ids, pro)
 }
