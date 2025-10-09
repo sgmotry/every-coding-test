@@ -39,7 +39,7 @@ func validateOrder(order OrderOptions) error {
 	}
 }
 
-func SortRecipe(recipe []model.Recipe, orderBy OrderByOptions, order OrderOptions) []model.Recipe {
+func SortRecipe(recipes []model.Recipe, orderBy OrderByOptions, order OrderOptions) []model.Recipe {
 	orderByErr := validateOrderBy(orderBy)
 	if orderByErr != nil {
 		fmt.Println("Error while checking orderBy.\n", orderByErr)
@@ -49,6 +49,6 @@ func SortRecipe(recipe []model.Recipe, orderBy OrderByOptions, order OrderOption
 		fmt.Println("Error while checking order.\n", orderErr)
 	}
 
-	sortedRecipe := quickSort(recipe, orderBy, order)
+	sortedRecipe := quickSort(recipes, orderBy, order)
 	return sortedRecipe
 }

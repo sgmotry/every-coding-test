@@ -4,9 +4,9 @@ import (
 	"every-coding-test/internal/model"
 )
 
-func quickSort(data []model.Recipe, orderBy OrderByOptions, order OrderOptions) []model.Recipe {
-	if len(data) <= 1 {
-		return data
+func quickSort(recipes []model.Recipe, orderBy OrderByOptions, order OrderOptions) []model.Recipe {
+	if len(recipes) <= 1 {
+		return recipes
 	}
 
 	var left []model.Recipe
@@ -17,15 +17,15 @@ func quickSort(data []model.Recipe, orderBy OrderByOptions, order OrderOptions) 
 	case Id:
 		var pivot uint32
 		var pivotIndex int
-		if data[0].Id > data[1].Id {
-			pivot = data[0].Id
+		if recipes[0].Id > recipes[1].Id {
+			pivot = recipes[0].Id
 			pivotIndex = 0
 		} else {
-			pivot = data[1].Id
+			pivot = recipes[1].Id
 			pivotIndex = 1
 		}
-		pivotRecipe = data[pivotIndex]
-		for index, value := range data {
+		pivotRecipe = recipes[pivotIndex]
+		for index, value := range recipes {
 			if index == pivotIndex {
 				continue
 			}
@@ -45,15 +45,15 @@ func quickSort(data []model.Recipe, orderBy OrderByOptions, order OrderOptions) 
 	case Name:
 		var pivot string
 		var pivotIndex int
-		if data[0].Name > data[1].Name {
-			pivot = data[0].Name
+		if recipes[0].Name > recipes[1].Name {
+			pivot = recipes[0].Name
 			pivotIndex = 0
 		} else {
-			pivot = data[1].Name
+			pivot = recipes[1].Name
 			pivotIndex = 1
 		}
-		pivotRecipe = data[pivotIndex]
-		for index, value := range data {
+		pivotRecipe = recipes[pivotIndex]
+		for index, value := range recipes {
 			if index == pivotIndex {
 				continue
 			}
@@ -72,15 +72,15 @@ func quickSort(data []model.Recipe, orderBy OrderByOptions, order OrderOptions) 
 	case Calories:
 		var pivot float32
 		var pivotIndex int
-		if data[0].Nutrition.Calorie > data[1].Nutrition.Calorie {
-			pivot = data[0].Nutrition.Calorie
+		if recipes[0].Nutrition.Calorie > recipes[1].Nutrition.Calorie {
+			pivot = recipes[0].Nutrition.Calorie
 			pivotIndex = 0
 		} else {
-			pivot = data[1].Nutrition.Calorie
+			pivot = recipes[1].Nutrition.Calorie
 			pivotIndex = 1
 		}
-		pivotRecipe = data[pivotIndex]
-		for index, value := range data {
+		pivotRecipe = recipes[pivotIndex]
+		for index, value := range recipes {
 			if index == pivotIndex {
 				continue
 			}
@@ -99,15 +99,15 @@ func quickSort(data []model.Recipe, orderBy OrderByOptions, order OrderOptions) 
 	case CookingTime:
 		var pivot int
 		var pivotIndex int
-		if data[0].Time > data[1].Time {
-			pivot = data[0].Time
+		if recipes[0].Time > recipes[1].Time {
+			pivot = recipes[0].Time
 			pivotIndex = 0
 		} else {
-			pivot = data[1].Time
+			pivot = recipes[1].Time
 			pivotIndex = 1
 		}
-		pivotRecipe = data[pivotIndex]
-		for index, value := range data {
+		pivotRecipe = recipes[pivotIndex]
+		for index, value := range recipes {
 			if index == pivotIndex {
 				continue
 			}
