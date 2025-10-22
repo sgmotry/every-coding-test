@@ -1,0 +1,46 @@
+Project "Recipe Management" {
+  Note: "DBML schema converted from Go struct definitions"
+}
+
+Table recipes {
+  id          int        [pk, note: "識別用ID（プライマリキー）"]
+  name        varchar    [note: "レシピ名"]
+  category    varchar    [note: "分類"]
+  howmany     int        [note: "何人分か"]
+  time        int        [note: "調理時間（分）"]
+  nutrition_id int       [ref: > nutritions.id, note: "栄養価参照"]
+}
+
+Table descript {
+  id        int      [pk]
+  recipe_id int      [ref: > recipes.id]
+  text      text     [note: "作り方の説明"]
+}
+
+Table ingredients {
+  id         int      [pk]
+  recipe_id  int      [ref: > recipes.id]
+  name       varchar  
+  amount_id  int      [ref: > amounts.id]
+}
+
+Table amounts {
+  id      int       [pk]
+  number  float     [note: "数値"]
+  unit    varchar   [note: "単位"]
+}
+
+Table nutritions {
+  id              int     [pk]
+  calorie         float   [note: "カロリー（kcal）"]
+  protein         float   [note: "たんぱく質（g）"]
+  lipids          float   [note: "脂質（g）"]
+  carbohydrates   float   [note: "炭水化物（g）"]
+}
+
+Table other_nutritions {
+  id             int     [pk]
+  nutrition_id   int     [ref: > nutritions.id]
+  name           varchar [note: "栄養素名"]
+  amount_id      int     [ref: > amounts.id]
+}
